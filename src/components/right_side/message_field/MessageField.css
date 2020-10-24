@@ -1,0 +1,5 @@
+.MessageField{
+    display: flex;
+    height: 70%;
+    background-color: red;
+}
