@@ -1,14 +1,19 @@
-import './App.css';
+import React, { Component } from 'react'
 import LeftSide from './components/left_side/LeftSide'
 import RightSide from './components/right_side/RightSide'
 
-function App() {
-  return (
-    <div className="App">
-      <LeftSide />
-      <RightSide />
-    </div>
-  );
-}
+export default class App extends Component {
+  constructor(props) {
+    super(props);
 
-export default App;
+  }
+  
+  render() {
+    return (
+      <div className="App">
+        <LeftSide />
+        <RightSide />
+      </div>
+    )
+  }
+}
