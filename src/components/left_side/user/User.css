@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: column;
   background-color: #f5f5f5;
+  border-bottom: 1px solid grey;
+  border-right: 1px solid grey;
 }
 .user-info {
   display: flex;
@@ -25,7 +27,7 @@
   border-radius: 3vh;
   height: 30px;
   font-size: 20px;
-  font-family: ;
+  margin-bottom: 30px;
 }
 [type="search"] {
   border: none;

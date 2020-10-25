@@ -1,0 +1,9 @@
+.MemberItem{
+    display: flex;
+    flex-direction: row;
+}
+.MemberItem img{
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+}
