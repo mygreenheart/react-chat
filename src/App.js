@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import "./App.css"
 import LeftSide from './components/left_side/LeftSide'
 import RightSide from './components/right_side/RightSide'
 
@@ -7,8 +8,9 @@ import RightSide from './components/right_side/RightSide'
 export default class App extends Component {
   constructor(props) {
     super(props)
-    
+
     this.state = {
+      choosenMember: {},
       members: [
         {
           is_online: true,
@@ -34,16 +36,47 @@ export default class App extends Component {
           img: "https://www.spletnik.ru/thumb/310x310/img/persons/kinopoisk_ru-Ryan-Gosling-1090000.jpg",
           uuid: "jdhnf978WEHJSNDL"
         },
+        {
+          is_online: false,
+          name: "Barrera",
+          img: "https://www.spletnik.ru/thumb/310x310/img/persons/kinopoisk_ru-Ryan-Gosling-1090000.jpg",
+          uuid: "GJb19NYmVkyUDeuKYmyxtA"
+        },
+        {
+          is_online: false,
+          name: "Barrera",
+          img: "https://www.spletnik.ru/thumb/310x310/img/persons/kinopoisk_ru-Ryan-Gosling-1090000.jpg",
+          uuid: "DZTQzeR36keJiNoKYYuFZQ=="
+        },
+        {
+          is_online: false,
+          name: "Barrera",
+          img: "https://www.spletnik.ru/thumb/310x310/img/persons/kinopoisk_ru-Ryan-Gosling-1090000.jpg",
+          uuid: "jR7HZMdoKkaWMI76sOjpgQ=="
+        },
       ]
 
     }
+    this.handleMemberItem = this.handleMemberItem.bind(this)
+  }
+
+
+  handleMemberItem(id) {
+    this.state.members.map(member => {
+      if (member.uuid === id) {
+        this.setState(
+          this.state.choosenMember = member
+        )
+      }
+    })
   }
 
   render() {
+
     return (
       <div className="App">
-        <LeftSide members={this.state.members} />
-        <RightSide />
+        <LeftSide members={this.state.members} handleMemberItem={this.handleMemberItem} />
+        <RightSide members={this.state.members} choosenMember={this.state.choosenMember} />
       </div>
     )
   }

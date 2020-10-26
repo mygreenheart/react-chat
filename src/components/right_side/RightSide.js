@@ -3,10 +3,11 @@ import MessageHeader from '../right_side/message_header/MessageHeader'
 import MessageField from '../right_side/message_field/MessageField'
 import "./RightSide.css"
 
-export default function RightSide() {
+export default function RightSide(props) {
+
     return (
         <div className="RightSide">
-            <MessageHeader />
+            <MessageHeader choosenMember={props.choosenMember}/>
             <MessageField />
         </div>
     )

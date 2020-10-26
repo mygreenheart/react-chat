@@ -5,10 +5,11 @@ import MemberList from './member_list/MemberList'
 
 
 export default function LeftSide(props) {
+ 
     return (
         <div className="LeftSide">
             <User />
-            <MemberList members={props.members} />
+            <MemberList members={props.members} handleMemberItem={props.handleMemberItem}/>
         </div>
     )
 }

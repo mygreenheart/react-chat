@@ -5,11 +5,11 @@ import MemberItem from '../member_item/MemberItem'
 export default function MemberList(props) {
     const members = props.members.map((member) => {
         return (
-            <MemberItem key={member.uuid} member={member} />
+            <MemberItem key={member.uuid} member={member} handleMemberItem={props.handleMemberItem}/>
         )
     })
     return (
-        <div>
+        <div className="MemberList">
             <h1>Chats</h1>
             {members}
         </div>
