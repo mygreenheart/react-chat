@@ -7,8 +7,8 @@ export default function RightSide(props) {
 
     return (
         <div className="RightSide">
-            <MessageHeader choosenMember={props.choosenMember}/>
-            <MessageField />
+            <MessageHeader choosenMember={props.choosenMember} />
+            <MessageField messages={props.messages} choosenMember={props.choosenMember} />
         </div>
     )
 }

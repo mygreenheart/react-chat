@@ -1,0 +1,13 @@
+.Message {
+  display: flex;
+}
+.message-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.message-icon img {
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+}

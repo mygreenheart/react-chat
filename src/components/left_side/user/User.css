@@ -21,30 +21,8 @@
   flex-direction: row;
 }
 
-.search {
-  border: 1px solid #ccc;
-  display: inline-block;
+.search input{
+  width: 90%;
   border-radius: 3vh;
   height: 30px;
-  font-size: 20px;
-  margin-bottom: 30px;
-}
-[type="search"] {
-  border: none;
-  outline: none;
-}
-.fas.fa-search {
-  margin-left: 10px;
-  color: #ccc;
-}
-
-input[type="text"]::-ms-clear {
-  display: none;
-  width: 0;
-  height: 0;
-}
-input[type="text"]::-ms-reveal {
-  display: none;
-  width: 0;
-  height: 0;
 }
