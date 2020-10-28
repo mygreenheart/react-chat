@@ -9,9 +9,9 @@ export default function MemberItem(props) {
         <div className="MemberItem" onClick={() => props.handleMemberItem(props.member.uuid)}>
             <div className="member-info">
                 <img src={props.member.img} alt={props.member.name} />
-                <div>
-                    <h2>{props.member.name}</h2>
-                    <p>Message here...</p>
+                <div className="member-text">
+                    <div>{props.member.name}</div>
+                    <div>Message here...</div>
                 </div>
             </div>
             <p className="member-date">{date.getHours() + ":" + date.getMinutes()}</p>

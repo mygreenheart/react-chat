@@ -14,7 +14,13 @@ export default class App extends Component {
     this.state = {
       choosenMember: {},
       message: messageData,
-      members: memberData
+      members: memberData,
+      me: {
+        isOnline: true,
+        name: "Alex",
+        img: "http://localhost:3000/static/media/user-profile.9ed2f905.svg",
+        uuid: "lAWIy7U/50GcyxkUqEwGhA=="
+      }
     }
     this.handleMemberItem = this.handleMemberItem.bind(this)
   }
@@ -34,7 +40,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <LeftSide members={this.state.members} handleMemberItem={this.handleMemberItem} />
-        <RightSide choosenMember={this.state.choosenMember} messages={this.state.message} />
+        <RightSide me={this.state.me} choosenMember={this.state.choosenMember} messages={this.state.message} />
       </div>
     )
   }

@@ -1,12 +1,18 @@
-.MessageHeader{
-    display: flex;
-    height: 13%;
-    justify-content: start;
-    align-items: center;
-    background-color: #f5f5f5;
+.MessageHeader {
+  display: flex;
+  height: 13%;
+  justify-content: start;
+  align-items: center;
+  background-color: #f5f5f5;
+  border: 1px solid #e8e8e8;
 }
-.MessageHeader img{
-    width: 10vh;
-    height: 10vh;
-    border-radius: 50%;
+.MessageHeader p {
+  font-size: 5vh;
+  font-weight: bold;
+}
+.MessageHeader img {
+  margin: 10px;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
 }
