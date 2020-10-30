@@ -1,11 +1,9 @@
 import React from 'react'
 import "./MemberItem.css"
-import isOnline from "../../../img/isOnline.png"
 
 export default function MemberItem(props) {
 
     const date = new Date()
-
     return (
         <div className="MemberItem" onClick={() => props.handleMemberItem(props.member.uuid)}>
             <div className="member-info">
@@ -16,7 +14,11 @@ export default function MemberItem(props) {
                 </div>
                 <div className="member-text">
                     <div>{props.member.name}</div>
-                    <div>{props.lastMessage}</div>
+                    {props.messages.map(message => {
+                        if (message.sender_id === props.member.uuid) {
+                            console.log(message)
+                        }
+                    })}
                 </div>
             </div>
             <div className="member-date">{date.getHours() + ":" + date.getMinutes()}</div>

@@ -23,6 +23,7 @@ export default class App extends Component {
       }
     }
     this.handleMemberItem = this.handleMemberItem.bind(this)
+    this.sendMessageData = this.sendMessageData.bind(this)
   }
 
 
@@ -35,12 +36,21 @@ export default class App extends Component {
       }
     })
   }
+  sendMessageData(message, uuid) {
+    const a = {
+      "jj": message,
+      "id": uuid
+    }
 
+
+    console.log(a)
+  }
   render() {
+    console.log()
     return (
       <div className="App">
         <LeftSide messages={this.state.message} members={this.state.members} handleMemberItem={this.handleMemberItem} />
-        <RightSide me={this.state.me} choosenMember={this.state.choosenMember} messages={this.state.message} />
+        <RightSide me={this.state.me} choosenMember={this.state.choosenMember} messages={this.state.message} sendMessageData={this.sendMessageData} />
       </div>
     )
   }

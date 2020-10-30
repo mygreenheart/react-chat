@@ -7,8 +7,12 @@ export default function MessageSend(props) {
         setMessageText(e.target.value);
     }
 
-    function sendMessageClicked(){
-        
+    function messageClick(e) {
+        e.preventDefault();
+        if (messageText.length > 0) {
+            props.sendMessageData(messageText, props.choosenMember.uuid)
+            setMessageText("")
+        }
     }
 
     return (
@@ -21,7 +25,7 @@ export default function MessageSend(props) {
                     placeholder="Type message to send" />
                 <button
                     type="submit"
-                    onClick={sendMessageClicked}
+                    onClick={messageClick}
                 >
                     Send
             </button>
