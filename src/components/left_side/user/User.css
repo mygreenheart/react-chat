@@ -15,13 +15,20 @@
   width: 8vh;
   border-radius: 30px;
 }
-.user-info div {
+.user-info {
+  position: relative;
   display: flex;
   flex-direction: row;
 }
-
-.search input{
+.search input {
+  font-family: FontAwesome;
   width: 90%;
   border-radius: 3vh;
   height: 30px;
+}
+.far {
+  position: absolute;
+  top: 6vh;
+  left: 6vh;
+  color: #719b75;
 }

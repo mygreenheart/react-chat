@@ -39,7 +39,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <LeftSide members={this.state.members} handleMemberItem={this.handleMemberItem} />
+        <LeftSide messages={this.state.message} members={this.state.members} handleMemberItem={this.handleMemberItem} />
         <RightSide me={this.state.me} choosenMember={this.state.choosenMember} messages={this.state.message} />
       </div>
     )

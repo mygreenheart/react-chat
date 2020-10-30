@@ -2,10 +2,9 @@ import React from 'react'
 import "./Message.css"
 
 export default function Message(props) {
-    console.log(props.message.my_id)
     return (
         <>
-            {(props.message.my_id != undefined) ?
+            {(props.message.my_id !== undefined) ?
                 <div className="Message  my-message">
                     <div className="message-content my-message">
                         <div className="message-text">{props.message.content}</div>

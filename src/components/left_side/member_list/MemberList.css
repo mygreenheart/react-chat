@@ -1,5 +1,10 @@
-.MemberList{
-    height: 75vh;
-    overflow: scroll;
-   
+.MemberList {
+  height: 75vh;
+  overflow: scroll;
+}
+.MemberList h1 {
+  color: #3c92b5;
+  display: flex;
+  font-weight: 300;
+  align-items: flex-start;
 }
