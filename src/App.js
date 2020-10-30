@@ -4,7 +4,7 @@ import LeftSide from './components/left_side/LeftSide'
 import RightSide from './components/right_side/RightSide'
 import messageData from './messageData.json'
 import memberData from './membersData.json'
-
+import { v1 as uuidv1 } from 'uuid';
 
 
 export default class App extends Component {
@@ -36,17 +36,34 @@ export default class App extends Component {
       }
     })
   }
-  sendMessageData(message, uuid) {
-    const a = {
-      "jj": message,
-      "id": uuid
-    }
+  componentDidMount() {
+    const localMessage = JSON.parse(localStorage.getItem("message") || "[]")
+    console.log(localMessage)
 
 
-    console.log(a)
   }
+
+
+  sendMessageData(sendMessage, sendUuid) {
+    const date = new Date()
+    this.setState(prevState => ({
+      message: [
+        ...prevState.message, {
+          "content": sendMessage, "my_id": this.state.me.uuid, "sender_id": sendUuid, "uuid": uuidv1(), "date": date.getMonth() + "/" +
+            date.getDate() + "/" + date.getFullYear() + ", " +
+            date.getHours() + ":" +
+            date.getMinutes()
+        }
+      ]
+    }))
+
+  }
+  componentDidUpdate() {
+    localStorage.setItem("message", JSON.stringify(this.state.message))
+  }
+
   render() {
-    console.log()
+
     return (
       <div className="App">
         <LeftSide messages={this.state.message} members={this.state.members} handleMemberItem={this.handleMemberItem} />

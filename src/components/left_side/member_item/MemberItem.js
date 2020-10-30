@@ -14,11 +14,11 @@ export default function MemberItem(props) {
                 </div>
                 <div className="member-text">
                     <div>{props.member.name}</div>
-                    {props.messages.map(message => {
+                    {/* {props.messages.map(message => {
                         if (message.sender_id === props.member.uuid) {
                             console.log(message)
                         }
-                    })}
+                    })} */}
                 </div>
             </div>
             <div className="member-date">{date.getHours() + ":" + date.getMinutes()}</div>

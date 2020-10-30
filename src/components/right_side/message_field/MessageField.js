@@ -17,7 +17,8 @@ export default function MessageField(props) {
                 />)
         }
     })
-    console.log(messageList.childNodes)
+
+
     return (
 
         <div className="MessageField">
