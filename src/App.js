@@ -36,14 +36,16 @@ export default class App extends Component {
       }
     })
   }
+
+
   componentDidMount() {
     const localMessage = JSON.parse(localStorage.getItem("message") || "[]")
-    console.log(localMessage)
-
-
+    if (Object.entries(localMessage).length > 0) {
+      this.setState(() => ({
+        message: localMessage
+      }))
+    }
   }
-
-
   sendMessageData(sendMessage, sendUuid) {
     const date = new Date()
     this.setState(prevState => ({
@@ -56,14 +58,32 @@ export default class App extends Component {
         }
       ]
     }))
+    setTimeout(() => {
+      fetch("https://api.chucknorris.io/jokes/random")
+        .then(response => response.json())
+        .then(response => {
+          this.setState(prevState => ({
+            message: [
+              ...prevState.message, {
+                "content": response.value, "sender_id": sendUuid, "uuid": uuidv1(), "date": date.getMonth() + "/" +
+                  date.getDate() + "/" + date.getFullYear() + ", " +
+                  date.getHours() + ":" +
+                  date.getMinutes()
+              }
+            ]
+          }))
+        })
+        alert("message")
+    }, 10000)
 
   }
+
   componentDidUpdate() {
     localStorage.setItem("message", JSON.stringify(this.state.message))
   }
 
-  render() {
 
+  render() {
     return (
       <div className="App">
         <LeftSide messages={this.state.message} members={this.state.members} handleMemberItem={this.handleMemberItem} />

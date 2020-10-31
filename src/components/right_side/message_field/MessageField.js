@@ -17,8 +17,6 @@ export default function MessageField(props) {
                 />)
         }
     })
-
-
     return (
 
         <div className="MessageField">

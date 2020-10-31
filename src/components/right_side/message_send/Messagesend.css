@@ -1,0 +1,23 @@
+.MessageSend {
+  display: flex;
+  position: relative;
+  height: 17%;
+  width: 100%;
+  border-top: 1px solid #e2e2e2;
+}
+.MessageSend input {
+  border: 0px;
+
+  height: 100%;
+  width: 100%;
+  font-size: 2vh;
+  padding: 20px;
+}
+.MessageSend button {
+  cursor: pointer;
+  width: 10vh;
+  border: 0px;
+}
+.MessageSend button .far {
+  color: #000;
+}

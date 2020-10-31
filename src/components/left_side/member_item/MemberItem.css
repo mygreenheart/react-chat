@@ -6,7 +6,7 @@
   border-bottom: 1px solid #e2e2e2;
 }
 .member-info {
-  margin: 10px;
+  margin: 15px;
   display: flex;
   align-items: center;
 }
@@ -17,7 +17,7 @@
   justify-content: space-between;
 }
 .member-date {
-  margin: 10px;
+  margin-right: 20px;
 }
 .MemberItem img {
   width: 10vh;
@@ -29,7 +29,6 @@
 }
 .member-icon .far {
   position: absolute;
-
   top: 8vh;
   left: 8vh;
   color: #719b75;

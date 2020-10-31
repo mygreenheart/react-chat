@@ -9,7 +9,7 @@ export default function RightSide(props) {
     return (
         <div className="RightSide">
             <MessageHeader choosenMember={props.choosenMember} />
-            <MessageField me={props.me} messages={props.messages} choosenMember={props.choosenMember} />
+            <MessageField me={props.me} messages={props.messages} choosenMember={props.choosenMember}/>
             {(Object.entries(props.choosenMember).length === 0) ? null : <MessageSend choosenMember={props.choosenMember} sendMessageData={props.sendMessageData} />}
         </div>
     )

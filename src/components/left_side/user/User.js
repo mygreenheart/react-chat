@@ -10,9 +10,7 @@ export default function User() {
                 <img src={userProfileImg} className="user-img" alt="user" />
                 <i class="far fa-check-circle"></i>
             </div>
-            <div className="search">
-                <input type="text" placeholder="&#xF002; Search or start a new chat" />
-            </div>
+            <input type="text" placeholder="&#xF002; Search or start a new chat" />
         </div>
     )
 }

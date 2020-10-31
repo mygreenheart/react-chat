@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "./Messagesend.css"
 
 export default function MessageSend(props) {
     const [messageText, setMessageText] = useState("")
@@ -17,19 +18,14 @@ export default function MessageSend(props) {
 
     return (
         <section className="MessageSend">
-            <form>
-                <input
-                    type="text"
-                    value={messageText}
-                    onChange={currentMessageChanged}
-                    placeholder="Type message to send" />
-                <button
-                    type="submit"
-                    onClick={messageClick}
-                >
-                    Send
-            </button>
-            </form>
+            <input
+                type="text"
+                value={messageText}
+                onChange={currentMessageChanged}
+                placeholder="Type message to send" />
+            <button
+                type="submit"
+                onClick={messageClick} ><i class="far fa-paper-plane"></i></button>
         </section>
     )
 }
