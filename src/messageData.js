@@ -1,4 +1,4 @@
-[
+const messageDate = [
   {
     "content": "Сообщение 2",
     "sender_id": "98s7dfh9a8s7dhf",
@@ -32,3 +32,4 @@
     "date": "22 Apr 2017 16:35"
   }
 ]
+export default messageDate

@@ -1,4 +1,4 @@
-[
+const membersData = [
   {
     "is_online": true,
     "name": "Alice Freeman",
@@ -42,3 +42,4 @@
     "uuid": "jR7HZMdoKkaWMI76sOjpgQ=="
   }
 ]
+export default membersData

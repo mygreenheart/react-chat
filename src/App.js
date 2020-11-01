@@ -85,18 +85,15 @@ export default class App extends Component {
       }
     })
   }
-
   handleSearch(e) {
     this.setState({ searchSrt: e.target.value })
   }
-
   render() {
-    
+    console.log(this.handleSearch)
     return (
       <div className="App">
         <LeftSide messages={this.state.message}
           members={this.state.members}
-          searchStr={this.state.searchSrt}
           handleMemberItem={this.handleMemberItem}
           handleSearch={this.handleSearch} />
 
