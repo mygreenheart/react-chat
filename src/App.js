@@ -15,6 +15,7 @@ export default class App extends Component {
       choosenMember: {},
       message: messageData,
       members: memberData,
+      searchStr: "",
       me: {
         isOnline: true,
         name: "Alex",
@@ -23,18 +24,8 @@ export default class App extends Component {
       }
     }
     this.handleMemberItem = this.handleMemberItem.bind(this)
+    this.handleSearch = this.handleSearch.bind(this)
     this.sendMessageData = this.sendMessageData.bind(this)
-  }
-
-
-  handleMemberItem(id) {
-    this.state.members.map(member => {
-      if (member.uuid === id) {
-        this.setState(
-          this.state.choosenMember = member
-        )
-      }
-    })
   }
 
 
@@ -46,6 +37,11 @@ export default class App extends Component {
       }))
     }
   }
+
+  componentDidUpdate() {
+    localStorage.setItem("message", JSON.stringify(this.state.message))
+  }
+
   sendMessageData(sendMessage, sendUuid) {
     const date = new Date()
     this.setState(prevState => ({
@@ -73,40 +69,39 @@ export default class App extends Component {
             ]
           }))
         })
-        alert("message")
+      alert("message")
     }, 10000)
+  }
 
+  handleMemberItem(id) {
+    this.state.members.map(member => {
+      if (member.uuid === id) {
+        this.setState(
+          this.state.choosenMember = member
+        )
+      }
+    })
   }
-<<<<<<< HEAD
+
   handleSearch(e) {
-    this.setState({ searchSrt: e.target.value })
+    this.setState({ searchStr: e.target.value })
   }
+
   render() {
-    console.log(this.handleSearch)
+    console.log(this.state.searchSrt)
     return (
       <div className="App">
         <LeftSide messages={this.state.message}
           members={this.state.members}
           handleMemberItem={this.handleMemberItem}
-          handleSearch={this.handleSearch} />
+          handleSearch={this.handleSearch} 
+          searchStr={this.state.searchStr}
+          />
 
         <RightSide me={this.state.me}
           choosenMember={this.state.choosenMember}
           messages={this.state.message}
           sendMessageData={this.sendMessageData} />
-=======
-
-  componentDidUpdate() {
-    localStorage.setItem("message", JSON.stringify(this.state.message))
-  }
-
-
-  render() {
-    return (
-      <div className="App">
-        <LeftSide messages={this.state.message} members={this.state.members} handleMemberItem={this.handleMemberItem} />
-        <RightSide me={this.state.me} choosenMember={this.state.choosenMember} messages={this.state.message} sendMessageData={this.sendMessageData} />
->>>>>>> parent of 20744f4... 01/11/2020(still working)
       </div>
     )
   }

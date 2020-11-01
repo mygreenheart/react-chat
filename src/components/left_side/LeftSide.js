@@ -7,8 +7,8 @@ import MemberList from './member_list/MemberList'
 export default function LeftSide(props) {
     return (
         <div className="LeftSide">
-            <User />
-            <MemberList messages={props.messages} members={props.members} handleMemberItem={props.handleMemberItem}/>
+            <User handleSearch={props.handleSearch} />
+            <MemberList messages={props.messages} members={props.members} handleMemberItem={props.handleMemberItem} searchStr={props.searchStr} />
         </div>
     )
 }
