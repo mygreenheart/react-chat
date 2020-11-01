@@ -69,7 +69,7 @@ export default class App extends Component {
             ]
           }))
         })
-      alert("message")
+      alert("message is comming")
     }, 10000)
   }
 

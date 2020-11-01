@@ -5,7 +5,6 @@ import "./RightSide.css"
 import MessageSend from './message_send/MessageSend'
 
 export default function RightSide(props) {
-
     return (
         <div className="RightSide">
             <MessageHeader choosenMember={props.choosenMember} />
