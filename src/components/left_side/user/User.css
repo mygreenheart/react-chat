@@ -22,8 +22,9 @@
   flex-direction: row;
 }
 .User input {
+  margin: 0 auto;
   font-family: FontAwesome;
-  width: 90%;
+  width: 95%;
   border-radius: 3vh;
   height: 3vh;
 }

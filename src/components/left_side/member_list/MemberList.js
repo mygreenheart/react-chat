@@ -1,4 +1,5 @@
 import MemberItem from '../member_item/MemberItem'
+import "./MemberList.css"
 
 export default function MemberList(props) {
 
