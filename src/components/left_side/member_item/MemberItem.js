@@ -10,15 +10,9 @@ export default function MemberItem(props) {
                 <div className="member-icon">
                     <img src={props.member.img} alt={props.member.name}></img>
                     {props.member.is_online ? <i class="far fa-check-circle"></i> : null}
-
                 </div>
                 <div className="member-text">
                     <div>{props.member.name}</div>
-                    {/* {props.messages.map(message => {
-                        if (message.sender_id === props.member.uuid) {
-                            console.log(message)
-                        }
-                    })} */}
                 </div>
             </div>
             <div className="member-date">{date.getHours() + ":" + date.getMinutes()}</div>

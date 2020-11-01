@@ -34,3 +34,12 @@
   left: 8vh;
   color: #719b75;
 }
+@media only screen and (max-width: 600px) {
+  .member-info {
+    width: 10vh;
+    flex-direction: column;
+  }
+  .member-date{
+    display: none;
+  }
+}
