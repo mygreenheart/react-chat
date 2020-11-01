@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-chat/static/css/main.d9483f26.chunk.css",
+    "main.js": "/react-chat/static/js/main.692ce69c.chunk.js",
+    "main.js.map": "/react-chat/static/js/main.692ce69c.chunk.js.map",
+    "runtime-main.js": "/react-chat/static/js/runtime-main.68f27c8b.js",
+    "runtime-main.js.map": "/react-chat/static/js/runtime-main.68f27c8b.js.map",
+    "static/js/2.06851474.chunk.js": "/react-chat/static/js/2.06851474.chunk.js",
+    "static/js/2.06851474.chunk.js.map": "/react-chat/static/js/2.06851474.chunk.js.map",
+    "static/js/3.ff6a7a96.chunk.js": "/react-chat/static/js/3.ff6a7a96.chunk.js",
+    "static/js/3.ff6a7a96.chunk.js.map": "/react-chat/static/js/3.ff6a7a96.chunk.js.map",
+    "index.html": "/react-chat/index.html",
+    "static/css/main.d9483f26.chunk.css.map": "/react-chat/static/css/main.d9483f26.chunk.css.map",
+    "static/js/2.06851474.chunk.js.LICENSE.txt": "/react-chat/static/js/2.06851474.chunk.js.LICENSE.txt",
+    "static/media/user-profile.9ed2f905.svg": "/react-chat/static/media/user-profile.9ed2f905.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.68f27c8b.js",
+    "static/js/2.06851474.chunk.js",
+    "static/css/main.d9483f26.chunk.css",
+    "static/js/main.692ce69c.chunk.js"
+  ]
+}
