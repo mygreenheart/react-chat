@@ -1,8 +1,7 @@
 import React from 'react'
 import "./User.css"
 import userProfileImg from "./user-profile.svg"
-export default function User(props) {
-
+export default function User() {
 
     return (
         <div className="User">
@@ -11,7 +10,7 @@ export default function User(props) {
                 <img src={userProfileImg} className="user-img" alt="user" />
                 <i class="far fa-check-circle"></i>
             </div>
-            <input type="text" onChange={(e) => props.handleSearch(e)} placeholder="&#xF002; Search or start a new chat" />
+            <input type="text" placeholder="&#xF002; Search or start a new chat" />
         </div>
     )
 }
